@@ -1,5 +1,6 @@
 How to use Character Counter:
-Type text in the box and the applciation will show character count, word count and estimated reading time. The stats update in real-time as you type. Color-coded indicators show if you are meeting the word count goals.
+
+Type text in the box and the application will show character count, word count and estimated reading time. The stats update in real-time as you type. Color-coded indicators show if you are meeting the word count goals.
 
 Reflection:
 1. How did you handle state updates when the text changed?
