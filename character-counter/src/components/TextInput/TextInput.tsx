@@ -1,5 +1,6 @@
-import { useState, useCallback, ChangeEvent } from 'react';
-import { TextInputProps } from '../../types';
+import { useState, useCallback } from 'react';
+import type { ChangeEvent } from 'react';
+import type { TextInputProps } from '../../types';
 import '../../App.css';
 
 //Reusable functional component that allows for Text input, current value managed by useState
