@@ -1,23 +1,20 @@
-import { useState, useCallback } from 'react';
-import type { ChangeEvent } from 'react';
+import { useState } from 'react';
 import type { TextInputProps } from '../../types';
 import '../../App.css';
 
-//Reusable functional component that allows for Text input, current value managed by useState
-export const TextInput = ({ 
-  onTextChange, 
-  placeholder = "Start typing...", 
-  initialValue = "",
-  maxLength 
+export const TextInput = ({
+  onTextChange,
+  placeholder = 'Start typing...',
+  initialValue = '',
+  maxLength,
 }: TextInputProps) => {
-  const [text, setText] = useState<string>(initialValue);
+  const [text, setText] = useState(initialValue);
 
-  // Use useCallback to prevent unnecessary re-renders in parent
-  const handleChange = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
-    const newText = e.target.value;
-    setText(newText);
-    onTextChange(newText);
-  }, [onTextChange]);
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    setText(value);
+    onTextChange(value);
+  };
 
   return (
     <div className="text-input-container">
@@ -28,7 +25,6 @@ export const TextInput = ({
         placeholder={placeholder}
         maxLength={maxLength}
         rows={10}
-        aria-label="Text input area"
       />
     </div>
   );

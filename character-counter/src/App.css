@@ -1,3 +1,21 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+
 /* CSS for TextInput component*/
 .text-input-container {
   width: 100%;
@@ -131,3 +149,43 @@
   }
 }
 
+/* CSS character counter */
+.character-counter {
+  max-width: 800px;
+  width: 90%;  /* Changed from undefined */
+  margin: 0;   /* Remove auto */
+  padding: 2rem 1rem;
+}
+
+.counter-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.counter-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  color: #ffffff;  /* ← Changed to white */
+}
+
+.counter-header p {
+  margin: 0;
+  color: #f0f0f0;  /* ← Changed to light gray */
+  font-size: 1rem;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .character-counter {
+    padding: 1rem 0.5rem;
+  }
+
+  .counter-header h1 {
+    font-size: 1.5rem;
+  }
+}
