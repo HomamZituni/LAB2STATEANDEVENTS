@@ -17,6 +17,9 @@ export interface TextStats {
 export interface StatsDisplayProps {
   stats: TextStats;
   showReadingTime?: boolean;
+  minWords?: number;
+  maxWords?: number;
+  targetReadingTime?: number;
 }
 
 // types/index.ts
